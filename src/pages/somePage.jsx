@@ -3,7 +3,7 @@ import { DocumentUploadModal } from '../modals/documentUpload';
 import { ButtonWithProps } from '../components/button';
 
 export const SomePage = () => {
-    const [openModal, setOpenModal] = useState(false);
+    const [openModal, setOpenModal] = useState(true);
 
     const handleCloseModal = () => {
         setOpenModal(!openModal);
