@@ -128,7 +128,7 @@ export const FileUpload = () => {
                 </div>
             </div>
             {/* you can put ! before showProgress and you will see uploaded files (because of error call to axios) */}
-            {showProgress && (
+            {!showProgress && (
                 <div>
                     <section
                         style={{
@@ -194,46 +194,50 @@ export const FileUpload = () => {
                 <div>
                     <section
                         style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            marginBottom: '7px',
+                            borderBottom: '1px solid #d7d7d7',
+                            borderTop: '1px solid #d7d7d7',
+                            marginTop: '15px',
+                            padding: '15px',
                         }}
                     >
                         {uploadedFiles.map((file, index) => (
-                            <div key={index}>
+                            <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
                                 <UploadFileIcon sx={{ color: '#d88934' }} />
-                                <div
-                                    style={{
-                                        marginLeft: '15px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <span>{`${file.name} - uploading`}</span>
-                                    <span>{`${file.loading}%`}</span>
-                                </div>
-                                <div
-                                    style={{
-                                        width: '100%',
-                                        height: '6px',
-                                        marginBottom: '4px',
-                                        backgroundColor: '#d88934',
-                                        borderRadius: '30px',
-                                    }}
-                                >
+                                <div style={{ marginLeft: '15px', width: '100%' }}>
+                                    <div>
+                                        <span style={{ marginRight: '5px' }}>{`${file.name} - uploading`}</span>
+                                        <span>{`${file.loading}%`}</span>
+                                    </div>
                                     <div
                                         style={{
-                                            width: showProgress ? `${file.loading}%` : '10%',
-                                            height: '100%',
+                                            width: '100%',
+                                            height: '6px',
+                                            marginBottom: '4px',
                                             backgroundColor: '#d88934',
-                                            borderRadius: 'inherit',
+                                            borderRadius: '30px',
                                         }}
-                                    ></div>
+                                    >
+                                        <div
+                                            style={{
+                                                height: '100%',
+                                                backgroundColor: '#d88934',
+                                                borderRadius: 'inherit',
+                                            }}
+                                        ></div>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </section>
-                    <section style={{ overflow: 'scroll' }}>
+                    <section
+                        style={{
+                            overflow: 'scroll',
+                            borderBottom: '1px solid #d7d7d7',
+                            borderTop: '1px solid #d7d7d7',
+                            marginTop: '15px',
+                            padding: '15px',
+                        }}
+                    >
                         {uploadedFiles.map((file, index) => (
                             <div key={index} style={{ paddingBottom: '5px', borderBottom: '1px solid #d7d7d7' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
