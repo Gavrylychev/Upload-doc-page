@@ -18,7 +18,6 @@ import { ButtonCloseWithProps } from '../components/closeButton';
 import { ButtonWithProps } from '../components/button';
 import { FileUpload } from '../components/fileUpload';
 import { TestingCenter } from '../components/testingCenter';
-import './documentUpload.scss';
 
 export const DocumentUploadModal = ({ open, handleClose }) => {
     const [documentName, setDocumentName] = useState('');
@@ -240,7 +239,8 @@ export const DocumentUploadModal = ({ open, handleClose }) => {
                                         <FormControlLabel value="multiple" control={<Radio />} label="Multiple" />
                                     </RadioGroup>
                                 </FormControl>
-                                {/* when we will have some data from BE we could do a map method for an array or object and pass all props that we need and only 1 handleChange function  */}
+                                {/* when we will have some data from BE we could do a map method for an array or object 
+                                    and pass all props that we need and only 1 handleChange function  */}
                                 <TestingCenter
                                     text={'Testing Center 1'}
                                     handleChangeTestCenterValue={handleChangeTestCenter}
@@ -290,6 +290,7 @@ export const DocumentUploadModal = ({ open, handleClose }) => {
                                     fontWeight: 600,
                                     marginRight: '14px',
                                 }}
+                                onclick={handleClose}
                             />
                             <ButtonWithProps
                                 btnText="Cancel"
@@ -303,6 +304,7 @@ export const DocumentUploadModal = ({ open, handleClose }) => {
                                     fontSize: '14px',
                                     fontWeight: 600,
                                 }}
+                                onclick={handleClose}
                             />
                         </Box>
                     </Box>

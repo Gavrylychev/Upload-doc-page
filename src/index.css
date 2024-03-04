@@ -9,6 +9,7 @@ html {
     min-width: 100vh;
     height: 100vh;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 code {

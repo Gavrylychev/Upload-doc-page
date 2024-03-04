@@ -22,9 +22,9 @@ export const TestingCenter = ({ text, testCenterValue, handleChangeTestCenterVal
                     label="Select Client"
                     onChange={handleChangeTestCenterValue}
                 >
-                    <MenuItem value={1}>Center1</MenuItem>
-                    <MenuItem value={2}>Center2</MenuItem>
-                    <MenuItem value={3}>Center3</MenuItem>
+                    <MenuItem value={3}>Center1</MenuItem>
+                    <MenuItem value={4}>Center2</MenuItem>
+                    <MenuItem value={5}>Center3</MenuItem>
                 </Select>
             </FormControl>
             <AccessTimeIcon sx={{ transform: 'rotate(90deg)', marginLeft: '10px', color: '#0b0b5c' }} />
